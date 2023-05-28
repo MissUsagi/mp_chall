@@ -19,7 +19,8 @@ export default {
     },
     createArray(firstString, secondString) {
       if (firstString && secondString) {
-        this.showAlert = false;
+        this.showAlert = false; //pomyślałam, że dobrze byłoby dodać jakąś małą formę walidacji
+        //zostawiłam to małe powtórzenie przez wzgląd na potencjalnie lepszą czytelność kodu(?) ;)
         const arrayOne = firstString.split(",");
         const arrayTwo = secondString.split(",");
         this.newArray = arrayOne.filter(
@@ -62,13 +63,13 @@ export default {
       <base-input
         inputId="userInputTwo"
         inputType="text"
-        inputLabel="Input 2"
+        inputLabel="Input A"
         v-model.trim="inputTwoValue"
       />
       <base-input
         inputId="userInputThree"
         inputType="text"
-        inputLabel="Input 3"
+        inputLabel="Input B"
         v-model.trim="inputThreeValue"
       />
       <base-button
